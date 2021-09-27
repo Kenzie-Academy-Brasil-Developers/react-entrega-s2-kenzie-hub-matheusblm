@@ -93,7 +93,7 @@ function Signup({ authenticated }) {
               icon={DiGithubAlt}
               label="Contact"
               palceholder="Seu Contato"
-              error={errors.email?.message}
+              error={errors.contact?.message}
             />
             <Input
               register={register}
@@ -101,7 +101,7 @@ function Signup({ authenticated }) {
               icon={DiCode}
               label="Seu modulo"
               palceholder="Seu Modulo"
-              error={errors.email?.message}
+              error={errors.course_module?.message}
             />
             <Input
               register={register}
@@ -119,7 +119,7 @@ function Signup({ authenticated }) {
               palceholder="Confirmacao de senha"
               error={errors.passwordConfirm?.message}
             />
-            <Button type="submit">Enviar</Button>
+            <Button type="submit">Cadastrar</Button>
             <p>
               ja tem uma conta? Faca seu <Link to="/login">Login</Link>{" "}
             </p>

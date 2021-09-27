@@ -1,4 +1,4 @@
-import { FiCalendar, FiClipboard } from "react-icons/fi";
+import { HiAdjustments, HiCube } from "react-icons/hi";
 import Button from "../Button";
 import { Container } from "./styles";
 
@@ -6,14 +6,15 @@ function Card({ title, date, onClick }) {
   return (
     <Container>
       <span>
-        <FiClipboard /> {title}
+        <HiCube />
+        {title}
       </span>
       <hr />
-      <time>
-        <FiCalendar />
+      <span>
+        <HiAdjustments />
         {date}
-      </time>
-      <Button onClick={onClick}>Concluir</Button>
+      </span>
+      <Button onClick={onClick}>Exlcuir</Button>
     </Container>
   );
 }

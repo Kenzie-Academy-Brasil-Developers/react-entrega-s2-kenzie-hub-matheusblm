@@ -31,7 +31,7 @@ function Login({ authenticated, setAuthenticated }) {
       .post("/sessions", data)
       .then((response) => {
         const { token } = response.data;
-        localStorage.setItem("@Doit:token", JSON.stringify(token));
+        localStorage.setItem("@KenzieHub:token", JSON.stringify(token));
         setAuthenticated(true);
         return history.push("/dashboard");
       })
@@ -65,7 +65,7 @@ function Login({ authenticated, setAuthenticated }) {
               error={errors.password?.message}
             />
 
-            <Button type="submit">Enviar</Button>
+            <Button type="submit">Entrar</Button>
             <p>
               Nao tem uma conta? Faca seu <Link to="/signup">cadastro</Link>{" "}
             </p>

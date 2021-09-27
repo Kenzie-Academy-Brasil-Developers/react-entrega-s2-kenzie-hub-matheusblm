@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import SignupImage from "../../Assets/womam.svg";
+import SignupImage from "../../Assets/kenzie1.jpg";
 
 export const Container = styled.div`
   height: 100vh;
@@ -12,6 +12,7 @@ export const Background = styled.div`
     flex: 1;
     background: url(${SignupImage}) no-repeat center, var(--black);
     background-size: contain;
+    background-color: white;
   }
 `;
 
@@ -58,6 +59,6 @@ export const AnimationContainer = styled.div`
   }
   a {
     font-weight: bold;
-    color: var(--orange);
+    color: var(--red);
   }
 `;

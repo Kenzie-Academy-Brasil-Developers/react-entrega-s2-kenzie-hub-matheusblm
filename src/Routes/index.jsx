@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 function Routes() {
   const [authenticated, setAuthenticated] = useState(false);
   useEffect(() => {
-    const token = JSON.parse(localStorage.getItem("@Doit:token"));
+    const token = JSON.parse(localStorage.getItem("@KenzieHub:token"));
     if (token) {
       return setAuthenticated(true);
     }

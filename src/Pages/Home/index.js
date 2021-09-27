@@ -15,9 +15,9 @@ function Home({ authenticated }) {
     <Container>
       <Content>
         <h1>
-          do<span>.</span>it
+          Bem vindo ao <span>KenzieHub</span>!
         </h1>
-        <span>Organize-se de forma facil e efetiva </span>
+
         <div>
           <Button onClick={() => handleNavigation("/signup")} whiteSchema>
             Cadastre-se

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { FiEdit2 } from "react-icons/fi";
+import { FiEdit2, FiEdit3 } from "react-icons/fi";
 import { Redirect } from "react-router";
 import Button from "../../Components/Button";
 import Card from "../../Components/Card";
@@ -11,7 +11,7 @@ import { toast } from "react-toastify";
 function Dashboard({ authenticated }) {
   const [tecs, setTecs] = useState([]);
   const [token] = useState(
-    JSON.parse(localStorage.getItem("@Doit:token")) || ""
+    JSON.parse(localStorage.getItem("@KenzieHub:token")) || ""
   );
   const { register, handleSubmit } = useForm();
 
@@ -49,7 +49,9 @@ function Dashboard({ authenticated }) {
         }
       )
       .then((response) => loadTec())
-      .catch((err) => console.log(err));
+      .catch((err) =>
+        toast.error("Voce nao pode criar duas tec com o mesmo nome")
+      );
   };
 
   const handleDelete = (id) => {
@@ -78,7 +80,7 @@ function Dashboard({ authenticated }) {
             name="tec"
           />
           <Input
-            icon={FiEdit2}
+            icon={FiEdit3}
             placeholder="Qual seu Nivel na Linguagem?
             Iniciante, intermediario ou Avancado?"
             register={register}

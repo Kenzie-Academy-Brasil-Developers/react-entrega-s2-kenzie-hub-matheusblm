@@ -9,12 +9,12 @@ export default createGlobalStyle`
   }
 
   :root{
-      --white:  #f5f5f5;
-      --vanilla: #f1ede0;
-      --black: #0c0d0d;
-      --orange: #c85311;
+      --white:  #FFF8F0;
+      --vanilla: #FFCF99;
+      --black: #1E1E24;
+      --orange: #FFCF99;
       --gray: #666360;
-      --red: #c53030;
+      --red: #111D4A;
   }
   body{
       background-color: var(--vanilla);
