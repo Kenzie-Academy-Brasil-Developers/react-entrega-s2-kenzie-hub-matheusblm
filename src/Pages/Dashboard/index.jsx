@@ -8,7 +8,9 @@ import Input from "../../Components/Input";
 import { Container, InputContainer, TaskContainer } from "./styles";
 import api from "../../Services/api";
 import { toast } from "react-toastify";
-function Dashboard({ authenticated }) {
+import { useHistory } from "react-router-dom";
+function Dashboard({ authenticated, setAuthenticated }) {
+  const history = useHistory();
   const [tecs, setTecs] = useState([]);
   const [token] = useState(
     JSON.parse(localStorage.getItem("@KenzieHub:token")) || ""
@@ -64,7 +66,11 @@ function Dashboard({ authenticated }) {
       })
       .then((_) => setTecs(newList));
   };
-
+  const handleOut = () => {
+    localStorage.clear();
+    setAuthenticated(false);
+    history.push("/login");
+  };
   if (!authenticated) {
     return <Redirect to="/login" />;
   }
@@ -101,6 +107,9 @@ function Dashboard({ authenticated }) {
           />
         ))}
       </TaskContainer>
+      <Button id="buttonOut" onClick={handleOut}>
+        Sair
+      </Button>
     </Container>
   );
 }

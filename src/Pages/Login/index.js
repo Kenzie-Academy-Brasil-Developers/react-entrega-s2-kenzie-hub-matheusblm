@@ -61,6 +61,7 @@ function Login({ authenticated, setAuthenticated }) {
               name="password"
               icon={FiLock}
               label="Senha"
+              type="password"
               palceholder="Uma senha segura"
               error={errors.password?.message}
             />

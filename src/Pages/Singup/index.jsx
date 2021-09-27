@@ -109,6 +109,7 @@ function Signup({ authenticated }) {
               icon={FiLock}
               label="Senha"
               palceholder="Uma senha segura"
+              type="password"
               error={errors.password?.message}
             />
             <Input
@@ -117,6 +118,7 @@ function Signup({ authenticated }) {
               icon={FiLock}
               label="Confirmacao de Senha"
               palceholder="Confirmacao de senha"
+              type="password"
               error={errors.passwordConfirm?.message}
             />
             <Button type="submit">Cadastrar</Button>
